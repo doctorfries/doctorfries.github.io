@@ -5,6 +5,7 @@ document.getElementById('prompt-form').addEventListener('submit', function(event
     const sex = document.getElementById('sex').value;
     const age = document.getElementById('age').value;
     const diag = document.getElementById('diag').value;
+    const currs = document.getElementById('currs').value;
     const proc = document.getElementById('proc').value;
     const height = document.getElementById('height').value;
     const weight = document.getElementById('weight').value;
@@ -43,7 +44,7 @@ document.getElementById('prompt-form').addEventListener('submit', function(event
     let generatedPrompt = '';
 
     if (profile) {
-        generatedPrompt += `I am an ${profile}. The following are the details of my patient:`;
+        generatedPrompt += `I am an ${profile}. The following are the details of my patient: `;
     }
     if (age) {
         generatedPrompt += `Age: ${age}. `;
@@ -54,8 +55,11 @@ document.getElementById('prompt-form').addEventListener('submit', function(event
     if (diag) {
         generatedPrompt += `Currently diagnosed with ${diag}. `;
     }
+    if (currs) {
+        generatedPrompt += `Currently undergoing ${currs}. `;
+    }
     if (proc) {
-        generatedPrompt += `Undergoing ${proc}. `;
+        generatedPrompt += `Emergent procedure(s): ${proc}. `;
     }
     if (height) {
         generatedPrompt += `Height: ${height} cm. `;
