@@ -39,6 +39,8 @@ document.getElementById('prompt-form').addEventListener('submit', function(event
     const obstruction = document.getElementById('obstruction').value;
     const beard = document.getElementById('beard').value;
     const apnea = document.getElementById('apnea').value;
+    const radio = document.getElementById('radio').value;
+    const surgery = document.getElementById('surgery').value;
     
 
     let generatedPrompt = '';
@@ -160,6 +162,9 @@ document.getElementById('prompt-form').addEventListener('submit', function(event
     if (radio) {
         generatedPrompt += `Radiology report findings: `;
     }
+    if (surgery) {
+        generatedPrompt += `History of previous surgery: `;
+    }
 
 
 
@@ -168,7 +173,7 @@ document.getElementById('prompt-form').addEventListener('submit', function(event
     }
 
 
-    generatedPrompt += `Is this a difficult airway?`
+    generatedPrompt += `Is this a difficult airway? Elaborate and then give me a yes or no answer`
 
     document.getElementById('generated-prompt').textContent = generatedPrompt;
 
