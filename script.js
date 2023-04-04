@@ -109,13 +109,13 @@ document.getElementById('prompt-form').addEventListener('submit', function(event
         generatedPrompt += `Inter-incisor distance: ${mouth} cm. `;
     }
     if (flexion) {
-        generatedPrompt += `Neck flexion: ${flexion} degree. `;
+        generatedPrompt += `Neck flexion: ${flexion}. `;
     }
     if (extension) {
-        generatedPrompt += `Neck extension: ${extension} degree. `;
+        generatedPrompt += `Neck extension: ${extension}. `;
     }
     if (jaw) {
-        generatedPrompt += `Jaw movement: ${jaw} degree. `;
+        generatedPrompt += `Jaw movement: ${jaw}. `;
     }
     if (mandible == 'Yes') {
         generatedPrompt += `Receding mandible present. `;
