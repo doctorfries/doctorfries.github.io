@@ -39,9 +39,12 @@ document.getElementById('prompt-form').addEventListener('submit', function(event
     const obstruction = document.getElementById('obstruction').value;
     const beard = document.getElementById('beard').value;
     const apnea = document.getElementById('apnea').value;
-    const radio = document.getElementById('radio').value;
+    const radiology = document.getElementById('radiology').value;
     const surgery = document.getElementById('surgery').value;
-    
+    const otherh = document.getElementById('otherh').value;
+    const genetic = document.getElementById('genetic').value;
+    const othere = document.getElementById('othere').value;
+
 
     let generatedPrompt = '';
 
@@ -51,7 +54,7 @@ document.getElementById('prompt-form').addEventListener('submit', function(event
     if (age) {
         generatedPrompt += `Age: ${age}. `;
     }
-    if (sex) {
+    if (sex != 'NA') {
         generatedPrompt += `Sex: ${sex}. `;
     }
     if (diag) {
@@ -67,7 +70,7 @@ document.getElementById('prompt-form').addEventListener('submit', function(event
         generatedPrompt += `Height: ${height} cm. `;
     }
     if (weight) {
-        generatedPrompt += `Weight: ${weight} lb. `;
+        generatedPrompt += `Weight: ${weight} kg. `;
     }
     if (bmi) {
         generatedPrompt += `BMI: ${bmi}. `;
@@ -159,11 +162,20 @@ document.getElementById('prompt-form').addEventListener('submit', function(event
     if (apnea == 'Yes') {
         generatedPrompt += `History of apnea present. `;
     }
-    if (radio) {
+    if (radiology) {
         generatedPrompt += `Radiology report findings: `;
     }
     if (surgery) {
         generatedPrompt += `History of previous surgery: `;
+    }
+    if (otherh) {
+        generatedPrompt += `Other relevant history: `;
+    }
+    if (genetic) {
+        generatedPrompt += `Genetic syndrome: `;
+    }
+    if (othere) {
+        generatedPrompt += `Other examination findings: `;
     }
 
 

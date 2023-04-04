@@ -16,10 +16,11 @@
         </select>
 
         <label for="age">Patient Age</label>
-        <input type="number" id="age" min="0" step="1">    
+        <input type="text" id="age">    
 
         <label for="sex">Sex</label>
         <select id="sex">
+            <option value="NA">NA</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
             <option value="Non-binary">Non-binary</option>
@@ -37,7 +38,7 @@
         <label for="height">Height (cm)</label>
         <input type="number" id="height" min="0" step="0.1">
 
-        <label for="weight">Weight (lb)</label>
+        <label for="weight">Weight (kg)</label>
         <input type="number" id="weight" min="0" step="0.1">
 
         <label for="bmi">BMI</label>
@@ -209,8 +210,18 @@
             <option value="No">No</option>
         </select>
 
-        <label for="radio">Radiology report findings (leave empty if N/A)</label>
-        <input type="text" id="radio">
+        <label for="radiology">Radiology report findings (leave empty if N/A)</label>
+        <input type="text" id="radiology">
+
+        <label for="otherh">Other relevant history (leave empty if N/A)</label>
+        <input type="text" id="otherh">
+
+        <label for="genetic">Genetic syndrome (leave empty if N/A)</label>
+        <input type="text" id="genetic">
+
+        <label for="othere">Other examination findings (leave empty if N/A)</label>
+        <input type="text" id="othere">
+
 
         <button type="submit">Generate Prompt</button>
     </form>
