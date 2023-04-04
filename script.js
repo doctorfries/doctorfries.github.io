@@ -163,19 +163,19 @@ document.getElementById('prompt-form').addEventListener('submit', function(event
         generatedPrompt += `History of apnea present. `;
     }
     if (radiology) {
-        generatedPrompt += `Radiology report findings: `;
+        generatedPrompt += `Radiology report findings: ${radiology}. `;
     }
     if (surgery) {
-        generatedPrompt += `History of previous surgery: `;
+        generatedPrompt += `History of previous surgery: ${surgery}. `;
     }
     if (otherh) {
-        generatedPrompt += `Other relevant history: `;
+        generatedPrompt += `Other relevant history: ${otherh}. `;
     }
     if (genetic) {
-        generatedPrompt += `Genetic syndrome: `;
+        generatedPrompt += `Genetic syndrome: ${genetic}. `;
     }
     if (othere) {
-        generatedPrompt += `Other examination findings: `;
+        generatedPrompt += `Other examination findings: ${othere}. `;
     }
 
 
