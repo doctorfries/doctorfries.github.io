@@ -185,7 +185,7 @@ document.getElementById('prompt-form').addEventListener('submit', function(event
     }
 
 
-    generatedPrompt += `Is this a difficult airway? Elaborate and then give me a yes or no answer`
+    generatedPrompt += `Is this a difficult airway? Elaborate and then give me a yes or no answer.`
 
     document.getElementById('generated-prompt').textContent = generatedPrompt;
 
